@@ -56,7 +56,8 @@ class AdminController extends Controller
         $categories= Category::get();
         $admin = Session::get('admin');
         if($admin){
-            return view('categories',["name"=>$admin->name,"categories"=>$categories]);
+            $categories=Category::withCount('quizzes')->orderBy('id','desc')->paginate(10);
+            return view('categories',["name"=>$admin->name,'categories'=>$categories]);
         }else{
             return redirect('admin-login');
         }
