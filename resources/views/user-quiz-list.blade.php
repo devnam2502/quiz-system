@@ -15,7 +15,7 @@
         <ul class="border border-gray-200">
         <li class="p-2 font-bold">
                 <ul class="flex justify-between">
-                    <li class="w-30">Id</li>
+                    {{-- <li class="w-30">Id</li> --}}
                     <li class="w-110">Tên</li>
                     <li class="w-70">Số lượng câu hỏi</li>
                     <li class="w-50">Action</li>
@@ -25,9 +25,9 @@
             @foreach($quizData as $item)
             <li class="even:bg-gray-200 p-2">
                 <ul class="flex justify-between">
-                    <li class="w-30">{{$item->id}}</li>
+                    {{-- <li class="w-30">{{$item->id}}</li> --}}
                     <li class="w-110">{{$item->name}}</li>
-                    <li class="w-30">{{$item->mcq_count}}</li>
+                    <li class="w-70">{{$item->mcq_count}}</li>
                     <li class="w-50">
                     <a href="/start-quiz/{{$item->id}}/{{str_replace(' ','-', $item->name)}}" class="text-green-500 font-bold">
                         Tham Gia Quiz
