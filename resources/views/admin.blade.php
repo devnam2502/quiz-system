@@ -15,7 +15,7 @@
                 <ul class="flex justify-between">
                     <li class="w-30">Id</li>
                     <li class="w-70">Name</li>
-                    <li class="w-70">Email</li>
+                    <li class="w-100">Email</li>
                     <li class="w-70">Created At</li>
                     <li class="w-50">Action</li>
 
@@ -27,7 +27,7 @@
                 <ul class="flex justify-between">
                     <li class="w-30">{{$key+1}}</li>
                     <li class="w-70">{{$user->name}}</li>
-                    <li class="w-70">{{$user->email}}</li>
+                    <li class="w-100">{{$user->email}}</li>
                     <li class="w-70">{{$user->created_at ? $user->created_at->format('Y-m-d') : '' }}</li> <!-- Display created_at -->
                     <li class="w-50">
                         <a href="/delete-user/{{$user->id}}">

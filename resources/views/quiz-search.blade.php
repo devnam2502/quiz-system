@@ -9,7 +9,7 @@
     <x-user-navbar ></x-user-navbar>
 
     <div class="bg-gray-100 flex flex-col items-center min-h-screen pt-5">
-    <h2 class="text-2xl text-center text-green-800 mb-6 font-bold ">Search  : {{$quiz}}
+    <h2 class="text-2xl text-center text-green-800 mb-6 font-bold ">Search: {{$quiz}}
          </h2>
     <div class="w-200">
         <ul class="border border-gray-200">
@@ -18,7 +18,7 @@
                     <li class="w-30">Id</li>
                     <li class="w-110">Tên</li>
                     <li class="w-70">Số lượng câu hỏi</li>
-                    <li class="w-30">Action</li>
+                    <li class="w-50">Action</li>
                 </ul>
             </li>
 
@@ -27,8 +27,8 @@
                 <ul class="flex justify-between">
                     <li class="w-30">{{$item->id}}</li>
                     <li class="w-110">{{$item->name}}</li>
-                    <li class="w-30">{{$item->mcq_count}}</li>
-                    <li class="w-30">
+                    <li class="w-70">{{$item->mcq_count}}</li>
+                    <li class="w-50">
                     <a href="/start-quiz/{{$item->id}}/{{str_replace(' ','-',$item->name)}}" class="text-green-500 font-bold">
                         Tham gia Quiz
                         </a>

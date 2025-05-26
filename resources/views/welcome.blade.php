@@ -7,7 +7,7 @@
 </head>
 <body>
   <x-user-navbar></x-user-navbar>
-  <div class="flex flex-col min-h-screen items-center bg-gray-100">
+  <div class="flex flex-col min-h-screen items-center bg-gray-100 justify-between">
     @if(session('message-success'))
     <div>
         <p class=" text-green-500 font-bold">{{session('message-success')}}</p>
@@ -30,7 +30,7 @@
         <ul class="border border-gray-200">
         <li class="p-2 font-bold">
                 <ul class="flex justify-between">
-                    <li class="w-30">S</li>
+                    {{-- <li class="w-30">S</li> --}}
                     <li class="w-70">Tên</li>
                     <li class="w-70">Số lượng Quiz</li>
                     <li class="w-30">Action</li>
@@ -41,9 +41,9 @@
             @foreach($categories as $key=>$category)
             <li class="even:bg-gray-200 p-2">
                 <ul class="flex justify-between">
-                    <li class="w-30">{{$key+1}}</li>
+                    {{-- <li class="w-30">{{$key+1}}</li> --}}
                     <li class="w-70">{{$category->name}}</li>
-                    <li class="w-30">{{$category->quizzes_count}}</li>
+                    <li class="w-70">{{$category->quizzes_count}}</li>
                     <li class="w-30 flex">
 
                         <a href="user-quiz-list/{{$category->id}}/{{str_replace(' ','-',$category->name)}}">
