@@ -63,8 +63,6 @@
 @else
 <div class=" bg-white p-8 rounded-2xl  shadow-lg w-full max-w-md">
 <span class="text-green-500 font-bold">Quiz : {{session('quizDetails')->name}}</span>
-<p class="text-green-500 font-bold">Total MCQs : {{$totalMCQs}}
-</p>
 <h2 class="text-2xl text-center text-gray-800 mb-6 ">Thêm Câu Hỏi </h2>
 <form action="add-mcq" method="post" class="space-y-4">
 <div>
@@ -76,28 +74,28 @@
    @enderror
     </div>
     <div>
-        <input type="text"placeholder="Enter first option" name="a"
+        <input type="text"placeholder="Đáp án A" name="a"
         class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none">
         @error('a')
    <div class="text-red-500">{{$message}}</div>
    @enderror
     </div>
     <div>
-        <input type="text"placeholder="Enter second option" name="b"
+        <input type="text"placeholder="Đáp án B" name="b"
         class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none">
         @error('b')
    <div class="text-red-500">{{$message}}</div>
    @enderror
     </div>
     <div>
-        <input type="text"placeholder="Enter third option" name="c"
+        <input type="text"placeholder="Đáp án C" name="c"
         class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none">
         @error('c')
    <div class="text-red-500">{{$message}}</div>
    @enderror
     </div>
     <div>
-        <input type="text"placeholder="Enter forth option" name="d"
+        <input type="text"placeholder="Đáp án D" name="d"
         class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none">
         @error('d')
    <div class="text-red-500">{{$message}}</div>
@@ -119,7 +117,7 @@
     </div>
     <button type="submit" name="submit" value="add-more" class="w-full bg-blue-500 rounded-xl px-4 py-2 text-white" >Thêm câu hỏi</button>
     <button type="submit" name="submit" value="done" class="w-full bg-green-500 rounded-xl px-4 py-2 text-white" >Thêm và Submit</button>
-<a  class="w-full bg-red-500 block text-center rounded-xl px-4 py-2 text-white" href="/end-quiz">Hủy</a>
+<a  class="w-full bg-red-500 block text-center rounded-xl px-4 py-2 text-white" href="/end-quiz">Submit</a>
 
 
 </form>
